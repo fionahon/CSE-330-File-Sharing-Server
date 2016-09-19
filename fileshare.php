@@ -37,7 +37,6 @@
             </div>
             </fieldset>
             
-
             <div id = "filesuploaded">
                 <fieldset>
                 <p>Files you have uploaded:</p>
@@ -65,7 +64,6 @@
                                 exit;
                             }
                             
-                            
                             //Make sure username is valid
                             if (isset($_POST['user'])) {
                                 $user = $_SESSION['user'];
@@ -76,7 +74,6 @@
                             }
                        
                             $full_path = sprintf("/srv/storefiles/%s/%s", $user, $filename);
-                        
                         
                             if (move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $full_path)) {
                                 $finfo = new finfo(FILEINFO_MIME_TYPE);
